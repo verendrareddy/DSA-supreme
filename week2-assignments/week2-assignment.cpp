@@ -817,6 +817,51 @@ int value1=1;
       }
 
 
+   //fancy pattern
+/*
+*1*
+*121*
+*12321*
+*1234321*
+*123454321*
+*1234321*
+*12321*
+*121*
+*1*
+  */
+  
+  for(int row=0;row<n;row++)
+    {
+      
+       int cond = row<=n/2 ? 2*row+1 : (n-row-1)*2 + 1;
+      
+    for(int col=0;col<cond;col++)
+         {
+           if(col==0)
+           {
+             cout<<"*";
+           }
+          
+           if(col<=cond/2)
+           {
+             cout<<col+1;
+           }
+           else
+           {
+           cout<<cond-col;    
+           }
+      if(col == cond-1)
+      {
+        cout<<"*";
+      }
+      
+          
+         }
+    cout<<endl;
+    }
+
+  
+
   
 }
       
